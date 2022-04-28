@@ -1,0 +1,199 @@
+// Сброс стилей
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s;
+}
+body {
+    min-height: 100vh; // body занимает весь экран
+    scroll-behavior: smooth; // Плавный скролл к анкорам
+    text-rendering: optimizeSpeed; // Более приятный текст
+    line-height: 1.5; // Оптимальные отступы
+}
+// Сброс стилизации списков
+ul,
+ol {
+    list-style: none;
+}
+// Резиновые изображения с блочным поведением
+img {
+    max-width: 100%;
+    display: block;
+}
+//Сброс стилизации ссылок
+a {
+    text-decoration:none;
+    color: #000000;
+}
+
+
+//--------------------------------------------------------------------------
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #ffffff;
+    height: 10vh;
+    z-index: 999;
+    .main-menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        & ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+main {
+    margin-top: 10vh;
+    .preview {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        background-color: #f7f7f7;
+        &__text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            & span {
+                font-size: 34px;
+                font-weight: 800;
+                color: #457e7e;
+                transition: 0.2s;
+                cursor: pointer;
+            }
+        }
+        &__images {
+            display: flex;
+            margin-bottom: 50px;
+            & div {
+                height: 23vh;
+                overflow: hidden;
+                cursor: pointer;
+                &:not(:first-child) {
+                    margin-left: 20px;
+                }
+                & img {
+                    transition: 1s;
+                }
+                &>img:hover {
+                    transform: scale(2);
+                    transition: ease-out 3s ;
+                }
+            }
+        }
+        & p {
+            font-size: 30px;
+            font-style:normal;
+            font-weight: 200;
+            margin-bottom: 50px;
+        }
+        & a {
+            padding: 10px 30px 10px 30px;
+            border: 1px solid #000000;
+            border-radius: 25px;
+            transition: 0.2s;
+            &:hover {
+                border: 1px solid #457e7e;
+                background-color: #457e7e;
+                color: #ffffff;
+                transition: 0.2s;
+            }
+        }
+    }
+    .new {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        & h2 {
+            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: 300;
+            color: #457e7e;
+        }
+        & p {
+            margin-bottom: 10px;
+        }
+        & a {
+            &:hover {
+                opacity: 0.4;
+            }
+        }
+        &__left {
+            text-align: center;
+        }
+        &__left img {
+            width: 30vw;
+            margin-top: 30px;
+            transition: 0.8s;
+            &:hover {
+                opacity: 0.6;
+                transition: 0.8s;
+            }
+        }
+        &__right img {
+            width: 25vw;
+            transition: 0.8s;
+            &:hover {
+                opacity: 0.6;
+                transition: 0.8;
+            }
+        }
+    }
+    .instagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        background-color: #f7f7f7;
+        & p {
+            margin-bottom: 10px;
+        }
+        & a {
+            &:hover {
+                opacity: 0.4;
+            }
+        }
+        & .slider {
+            margin-top: 30px;
+            width: 100%;
+        }
+        & .swiper {
+            width: 80vw;
+        }
+    }
+}
+.footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .socials {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+//--------------------------------------
+
+  //------------------------------------------
